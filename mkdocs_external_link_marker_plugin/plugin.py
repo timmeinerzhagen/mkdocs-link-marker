@@ -8,14 +8,23 @@ from mkdocs.plugins import BasePlugin
 
 class ExternalLinkMarkerPlugin(BasePlugin):
     config_scheme = (
-        ('external_link_icon', config_options.Type(str, default='.fa-external-link-alt')),
+        ('enable_external_link', config_options.Type(str, default=True)),
+        ('icon_external_link', config_options.Type(str, default='⧉')),
+
+        ('enable_mail', config_options.Type(str, default=True)),
+        ('icon_mail', config_options.Type(str, default='✉')),
     )
 
     def __init__(self):
         self.enabled = True
 
     def on_page_content(self, html, page, config, files):
-        p = re.compile('<a href="(http.*)">(.*)</a>')
-        formatted = p.sub('<a href="\\1">\\2 🔗</a>', html)
-        
-        return formatted
+        if self.config['enable_external_link']:
+            p_external_link = re.compile('<a href="(http.*)">(.*)</a>')
+            html = p_external_link.sub('<a href="\\1">\\2 ' + self.config['icon_external_link'] + '</a>', html)
+
+        if self.config['enable_mail']:
+            p_mail = re.compile('<a href="(mailto:.*)">(.*)</a>')
+            html = p_mail.sub('<a href="\\1">\\2 ' + self.config['icon_mail'] + '</a>', html)
+
+        return html
