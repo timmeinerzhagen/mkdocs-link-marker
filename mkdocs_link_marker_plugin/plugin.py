@@ -6,7 +6,7 @@ import logging
 from mkdocs.config import config_options
 from mkdocs.plugins import BasePlugin
 
-class ExternalLinkMarkerPlugin(BasePlugin):
+class LinkMarkerPlugin(BasePlugin):
     config_scheme = (
         ('enable_external_link', config_options.Type(bool, default=True)),
         ('icon_external_link', config_options.Type(str, default='⧉')),
