@@ -14,5 +14,7 @@ class ExternalLinkMarkerPlugin(BasePlugin):
     def __init__(self):
         self.enabled = True
 
-    def on_page_content(self, html, page, config, files):
-        return html
+    def on_post_page(self, output, page, config):
+
+        print("html: ", html)
+        return html.replaceAll('</a>', '</a>Hello')
