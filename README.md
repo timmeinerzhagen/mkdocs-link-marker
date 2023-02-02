@@ -2,7 +2,7 @@
 
 MkDocs plugin for marking external links
 
-![comparison](./comparison.png)
+![comparison](docs/comparison.png)
 ## Setup
 
 1. Install the plugin:
