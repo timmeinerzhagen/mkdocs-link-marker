@@ -36,7 +36,7 @@ setup(
     packages=find_packages(),
     entry_points={
         'mkdocs.plugins': [
-            'external-link-marker = mkdocs_external-link-marker_plugin.plugin:ExternalLinkMarkerPlugin'
+            'external-link-marker = mkdocs_external_link_marker_plugin.plugin:ExternalLinkMarkerPlugin'
         ]
     }
 )
