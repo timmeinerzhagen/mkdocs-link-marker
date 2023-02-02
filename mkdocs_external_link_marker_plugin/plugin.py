@@ -15,6 +15,7 @@ class ExternalLinkMarkerPlugin(BasePlugin):
         self.enabled = True
 
     def on_page_content(self, html, page, config, files):
-
-        print("html: ", html)
-        return html.replace('</a>', '</a>Hello')
+        p = re.compile('<a href="(http.*)">(.*)</a>')
+        formatted = p.sub('<a href="\\1">\\2 🔗</a>', html)
+        
+        return formatted
