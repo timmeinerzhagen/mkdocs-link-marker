@@ -8,10 +8,10 @@ from mkdocs.plugins import BasePlugin
 
 class ExternalLinkMarkerPlugin(BasePlugin):
     config_scheme = (
-        ('enable_external_link', config_options.Type(str, default=True)),
+        ('enable_external_link', config_options.Type(bool, default=True)),
         ('icon_external_link', config_options.Type(str, default='⧉')),
 
-        ('enable_mail', config_options.Type(str, default=True)),
+        ('enable_mail', config_options.Type(bool, default=True)),
         ('icon_mail', config_options.Type(str, default='✉')),
     )
 
