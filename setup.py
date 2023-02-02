@@ -4,13 +4,13 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
-    name='mkdocs-external-link-marker',
-    version='0.1.2',
-    description='MkDocs plugin for marking external links.',    
+    name='mkdocs-link-marker',
+    version='0.1.0',
+    description='MkDocs plugin for marking links.',
     long_description=long_description,
     long_description_content_type="text/markdown",
     keywords='mkdocs link external',
-    url='https://github.com/timmeinerzhagen/mkdocs-external-link-marker',
+    url='https://github.com/timmeinerzhagen/mkdocs-link-marker',
     author='Tim Jonas Meinerzhagen',
     author_email='tim@meinerzhagen.me',
     license='MIT',
@@ -36,7 +36,7 @@ setup(
     packages=find_packages(),
     entry_points={
         'mkdocs.plugins': [
-            'external-link-marker = mkdocs_external-link-marker_plugin.plugin:ExternalLinkMarkerPlugin'
+            'link-marker = mkdocs_link_marker_plugin.plugin:LinkMarkerPlugin'
         ]
     }
 )

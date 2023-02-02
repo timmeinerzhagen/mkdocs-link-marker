@@ -1,18 +1,19 @@
-# mkdocs-external-link-marker
+# mkdocs-link-marker
 
 MkDocs plugin for marking external links
 
+![comparison](docs/comparison.png)
 ## Setup
 
 1. Install the plugin:
     ```bash
-    pip install mkdocs-external-link-marker
+    pip install mkdocs-link-marker
     ```
 2. Add the plugin to your `mkdocs.yml`
     ```bash
     plugins:
         - search
-        - external-link-marker
+        - link-marker
     ```
 
 ## Usage
@@ -21,5 +22,18 @@ Run the build!
 
 ## Options
 
-`external_link_icon`
+`enable_external_link`
 Change the default icon for marking external links.
+Default: True
+
+`icon_external_link`
+Change the default icon for marking external links.
+Default: ⧉
+
+`enable_mail`
+Change the default icon for marking external links.
+Default: True
+
+`icon_mail`
+Change the default icon for marking external links.
+Default: ✉
