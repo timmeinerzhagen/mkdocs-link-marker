@@ -1,8 +1,8 @@
 # mkdocs-link-marker
 
-MkDocs plugin for marking external links
+MkDocs plugin for marking external or mail links in your documentation.
 
-![comparison](docs/comparison.png)
+![comparison](https://github.com/timmeinerzhagen/mkdocs-link-marker/blob/main/docs/comparison.png)
 ## Setup
 
 1. Install the plugin:
@@ -23,7 +23,7 @@ Run the build!
 ## Options
 
 `enable_external_link`
-Change the default icon for marking external links.
+Whether to mark external links with the according icon.
 Default: True
 
 `icon_external_link`
@@ -31,9 +31,9 @@ Change the default icon for marking external links.
 Default: ⧉
 
 `enable_mail`
-Change the default icon for marking external links.
+Whether to mark mail links with the according icon.
 Default: True
 
 `icon_mail`
-Change the default icon for marking external links.
+Change the default icon for marking mail links.
 Default: ✉
