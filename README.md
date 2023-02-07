@@ -2,7 +2,7 @@
 
 MkDocs plugin for marking external or mail links in your documentation.
 
-![comparison](https://github.com/timmeinerzhagen/mkdocs-link-marker/blob/main/docs/comparison.png)
+![comparison](https://raw.githubusercontent.com/timmeinerzhagen/mkdocs-link-marker/main/docs/comparison.png)
 ## Setup
 
 1. Install the plugin:
