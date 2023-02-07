@@ -1,0 +1,6 @@
+site_name: example
+theme: material
+plugins:
+  - search
+  - link-marker
+

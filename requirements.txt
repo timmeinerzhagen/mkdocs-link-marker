@@ -1,0 +1,2 @@
+git+https://github.com/timmeinerzhagen/mkdocs-external-link-marker@feat/initial
+mkdocs-material
