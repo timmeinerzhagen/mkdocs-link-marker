@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='mkdocs-link-marker',
-    version='0.1.1',
+    version='0.1.2',
     description='MkDocs plugin for marking external or mail links in your documentation.',
     long_description=long_description,
     long_description_content_type="text/markdown",
