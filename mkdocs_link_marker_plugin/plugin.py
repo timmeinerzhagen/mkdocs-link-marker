@@ -13,6 +13,8 @@ class LinkMarkerPlugin(BasePlugin):
 
         ('enable_mail', config_options.Type(bool, default=True)),
         ('icon_mail', config_options.Type(str, default='✉')),
+
+        ('ignore_list', config_options.Type(list, default=[])),
     )
 
     def __init__(self):
@@ -23,6 +25,9 @@ class LinkMarkerPlugin(BasePlugin):
             p_external_link = re.compile('<a href="(http.*?)">(.*?)</a>')
             def repl_external_link(match):
                 href, content = match.group(1), match.group(2)
+                # Do not modify ignored urls
+                if href in self.config['ignore_list']:
+                    return f'<a href="{href}">{content}</a>'
                 # Do not add icon if the content contains an <img> tag
                 if re.search(r'<img\b', content, re.IGNORECASE):
                     return f'<a href="{href}">{content}</a>'
